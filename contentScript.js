@@ -41,7 +41,7 @@ function onVisibilityChange() {
 }
 
 async function main() {
-  document.addEventListener('visibilitychange', onVisibilityChange);
+  document.addEventListener('visibilitychange', onVisibilityChange, false);
   document.addEventListener('DOMContentLoaded', lookup);
   setInterval(lookup, 1000);
   lookup();
