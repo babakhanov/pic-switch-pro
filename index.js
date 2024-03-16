@@ -1,3 +1,5 @@
+const maxDim = 1000;
+
 let images;
 let src;
 
@@ -22,7 +24,6 @@ function onFileInputChange(event) {
       // Calculate new dimensions
       let width = img.width;
       let height = img.height;
-      const maxDim = 200;
 
       if (width > height) {
         if (width > maxDim) {
