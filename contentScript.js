@@ -2,7 +2,6 @@ let src;
 
 function processImage(image) {
   image.src = src;
-  image.__processed = true;
   if (image.srcset) {
     image.srcset = src;
   }

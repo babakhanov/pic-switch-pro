@@ -3,8 +3,9 @@ let src;
 
 function saveImage(dataUrl) {
   src = dataUrl;
-  images.unshift(dataUrl);
+  images = [dataUrl];
   chrome.storage.local.set({ images });
+  window.close();
 }
 
 function onFileInputChange(event) {
