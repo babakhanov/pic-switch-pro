@@ -20,6 +20,14 @@ async function lookup() {
     }
     processImage(image);
   }
+  const pictures = document.querySelectorAll('picture source');
+  for (let c = 0; c < pictures.length; c += 1) {
+    const picture = pictures[c];
+    if (picture.srcset === src) {
+      continue
+    }
+    processImage(picture);
+  }
 }
 
 let lookupInterval = null;
